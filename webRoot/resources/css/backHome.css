@@ -1,0 +1,37 @@
+/*control*/
+#control{
+    z-index:99;
+    right: 0px;
+    top: 0px; opacity: 1;
+    position: fixed;
+    height: 23px;
+    line-height: 23px;
+    padding: 5px;
+}
+#control ul li{
+    float: right;
+}
+#control ul li a{
+    padding: 0 2px 0 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+#control ul li a em{
+    background: url(../imgs/operatenew24.png) no-repeat;
+    color: #fff;
+}
+
+#control ul li a.editArticle em{
+    background-position: 0 -569px;
+    padding: 5px 5px 5px 20px;
+}
+
+#control ul li a.deleteArticle em{
+    background-position: 0 -509px;
+    padding: 5px 5px 5px 20px;
+}
+
+#control ul li a.backHome em{
+    background-position: 0 -30px;
+    padding: 5px 5px 5px 26px;
+}

@@ -1,0 +1,19 @@
+@charset "utf-8";*[hidefocus]{outline:none;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,button,textarea,p,blockquote,th,td{padding:0;margin:0;}
+body{font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";}
+fieldset,img,html,body,iframe{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:bold;font-size:100%;}
+caption,th{font-weight:normal;font-style:normal;text-align:left;}
+em{font-style: normal;font-weight: normal;}
+small{font-size:100%;}
+body,textarea,select,input,button{font-size:12px;color:#444;}
+body{background-color:#fff;}
+textarea{overflow:auto;resize:none;}
+a,button{cursor:pointer;}
+a{text-decoration:none;color:#444;outline:none;}
+a:hover{text-decoration:none;color:#7594B3;}
+::-webkit-input-placeholder {color:#666;}
+input:-moz-placeholder {color:#666;}
+

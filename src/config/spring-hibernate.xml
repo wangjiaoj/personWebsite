@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 配置数据源 -->
+<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/personWeb?useUnicode=true&amp;characterEncoding=utf-8"/>
+		<property name="user" value="root"/>
+		<property name="password" value="123456"/>
+	</bean>
+
+<!-- 配置SessionFactory -->
+<bean id="sessionFactory"
+    class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+    <property name="dataSource" ref="dataSource" />
+    <property name="hibernateProperties">
+        <props>
+            <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+            <prop key="hibernate.hbm2ddl.auto">update</prop>
+            <prop key="hibernate.show_sql">true</prop>
+            <prop key="hibernate.format_sql">true</prop>
+        </props>
+    </property>
+    <!-- 注解扫描的包 -->
+    <property name="annotatedClasses">
+        <list>
+            <value>ne.springmvc.entity.User</value>
+            <value>ne.springmvc.entity.Picture</value>
+            <value>ne.springmvc.entity.Category</value>
+            <value>ne.springmvc.entity.Tag</value>
+            <value>ne.springmvc.entity.Article</value>
+            <value>ne.springmvc.entity.TagRelationship</value>
+            <value>ne.springmvc.entity.Comment</value>
+        </list>
+    </property>
+</bean>
+
+<!-- 配置一个事务管理器 -->
+<bean id="transactionManager"
+    class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    <property name="sessionFactory" ref="sessionFactory" />
+</bean>
+
+<!-- 配置事务，使用代理的方式 -->
+<bean id="transactionProxy"
+    class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+    abstract="true">
+    <property name="transactionManager" ref="transactionManager"></property>
+    <property name="transactionAttributes">
+        <props>
+            <prop key="add*">PROPAGATION_REQUIRED,-Exception</prop>
+            <prop key="modify*">PROPAGATION_REQUIRED,-myException</prop>
+            <prop key="del*">PROPAGATION_REQUIRED</prop>
+            <prop key="*">PROPAGATION_REQUIRED</prop>
+        </props>
+    </property>
+</bean>
+</beans>

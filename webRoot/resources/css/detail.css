@@ -1,0 +1,209 @@
+@charset "utf-8";
+*, *:before, *:after {
+      -webkit-box-sizing: content--box;  
+    -moz-box-sizing: content-box;
+     box-sizing: content-box;  
+}
+.title a:hover,.title a:focus{
+ text-decoration: none;
+     color: #7594B3;
+}
+
+.g-hd {
+    background-image: url(../imgs/5629511628841059787.png);
+    height: 360px;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+}
+.g-bd {
+    margin: -53px auto 0;
+    width: 1000px;
+}
+.g-sd{
+    float: left;
+    width: 190px;
+    padding: 0 60px 0 0;
+}
+.g-mn{
+    float: left;
+    width: 650px;
+    padding: 132px 100px 0 0;
+}
+/*左侧*/
+.g-sd .personPhoto{
+    width:190px;
+    height: 160px;
+}
+.g-sd img{
+    width: 96px;
+    height: 96px;
+    border: 5px solid #fff;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.g-sd div.search{
+    border-top: 1px solid #eee;
+    margin: 30px 0 0;
+    padding-top: 30px;
+    position:relative;
+}
+.g-sd div.search a.btn{
+    background: url(../imgs/icon4-24.png) no-repeat 999px 999px;
+    background-position: 0 -81px;
+    width: 16px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 7px;
+}
+.g-sd div.search input{
+    background: none;
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 25px;
+    padding: 5px  20px 2px 25px; ;
+}
+.g-sd div.search div.searchBox{
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+}
+/*top autocomplete*/
+.a-w-sel-4 {
+    width: 100%;
+    margin: -10px 0 0 -120px;
+    display: none;
+}
+
+.a-w-sel {
+    position: absolute;
+    top: 100%;
+    padding: 0 2px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.w-sel .seli {
+    position: relative;
+    float: left;
+    z-index: 2;
+    zoom: 1;
+    width: 100%;
+    margin: -1px 0 1px;
+    border: 1px solid #b2b2b2;
+    background-color: #f3f3f3;
+}
+.w-sel-4 .seli a {
+    display: block;
+    padding: 0px 15px;
+    line-height: 40px;
+    font-size: 12px;
+    text-align: left;
+    color:#191919;
+}
+
+ 
+.w-sel .seli a:hover,.w-sel .seli a:focus {
+   color: #428bca;
+    text-decoration: none;
+}
+
+.a-w-sel-do {
+    padding-bottom: 3px;
+    display: block;
+}
+
+#autoCompelete{
+	 left: 118px;
+}
+/*右侧*/
+.contentBox{
+    border-bottom: 1px solid #eee;
+    padding: 0 0 50px;
+    margin: 0 0 50px;
+}
+.main-content{
+    padding: 30px 0px;
+}
+g.g-mn .tags{
+    height: 19px;
+    line-height: 19px;
+    overflow: hidden;
+}
+.tags span a,.articleTime a{
+    color: #aaa;
+    line-height: 24px;
+}
+.tags span a {
+    margin-right: 16px;
+}
+.otherArticle{
+    padding: 0 0 50px;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+.nextArticle,.lastArticle{
+    color: #56AAC3;
+}
+
+.nextArticle{
+    float: right;
+}
+.lastArticle{
+    float: left;
+}
+
+     /*评论列表模块*/
+
+       
+        .comments{
+            padding: 10px;;
+        }
+        .g-ft{
+            border-top: 1px solid #eee;
+            height: 50px;;
+            text-align: center;
+            padding: 20px;
+            color: #ccc;
+        }
+        .clear{
+            clear: both;
+        }
+        #makeComments{
+            padding: 10px;
+        }
+        #makeComments>div{
+            margin:10px 0px;
+        }
+        #makeComments input{
+            padding: 5px ;
+        }
+        #makeComments button{
+            height: 32px;
+            width: 50px;
+        }
+        /*评论列表*/
+        #commentsList ul li{
+            border-top: 1px solid #eee;
+        }
+        #commentsList li a,#replayName a{
+             color: #56AAC3;
+        }
+        #commentsList li .commmentInfo{
+            position: relative;
+            padding: 10px 0px;
+        }
+        #commentsList li .commmentInfo .detailComment{
+
+        }
+        #commentsList li .commmentInfo .commentOperation{
+            position: absolute;
+            top:10px;
+            right:0;
+        }

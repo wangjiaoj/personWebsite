@@ -1,0 +1,65 @@
+        html,body {
+            height:100%;
+            width:100%;
+        }
+
+
+        .main{
+       background: url(../imgs/background.jpg);
+       background-size: cover;
+       }
+
+
+        .content-body{
+            width: 700px;
+            margin: 0 auto;
+            height:100%;
+            z-index:99;
+            background-color: #fff;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .article-title{
+            margin-bottom: 5px;
+            width: 100%;
+        }
+        .article-title input{
+            width:100%;
+            height: 40px;
+            padding: 5px 10px;
+        }
+
+        #submitsummernote{
+            float: right;
+            margin-top: 10px;
+        }
+        .article-tags{
+            border: 1px solid #ddd;
+            height: 40px;
+            padding: 10px 10px;
+        }
+
+        .content-tags {
+            float: left;
+            background: url(../imgs/icon24.png) no-repeat 999px 999px;
+            overflow: hidden;
+            background-position: 0 -103px;
+            min-width: 16px;
+            min-height: 16px;
+            margin-right: 16px;;
+        }
+
+        .content-tags span a:first-child {
+            margin-left: 16px;
+        }
+        .content-tags span a {
+            color: #aaa;
+        }
+        .content-tags span a:hover,.content-tags span  a:focus {
+            text-decoration: none;
+        }
+        .article-tags input{
+            border: none;
+            outline-style: none;
+            width: 200px;
+        }
